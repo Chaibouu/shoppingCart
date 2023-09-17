@@ -13,7 +13,7 @@ header{
     height: 100%;
     border: 1px solid rgba(91, 244, 91, 0.719);
     border-radius: 26% 74% 25% 75% / 71% 73% 27% 29% ;
-    background-color: rgba(118, 236, 109, 0.634);
+    background-color: #76ec6da2;
     transition: border-radius 1000ms ease-in-out;
 }
 .imgFont:hover{
@@ -29,4 +29,29 @@ ul li:hover{
 }
 .titreLogo>h1{
     font-size: 120px;
+}
+.titreLogo+p{
+    font-size:40px;
+}
+.iconEnTete>i{
+    color: #22c516a2;
+    border: 1px solid #76ec6da2;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    padding: 5px;
+    margin: 2px;
+}
+.iconEnTete>i:hover{
+    background-color: #22c516a2;
+    color: #EAEDED;
+}
+.readMore{
+    border: 1px solid #22c516a2;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.readMore:hover{
+    background-color: #22c516a2;
+    color: white;
 }
