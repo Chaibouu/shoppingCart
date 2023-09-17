@@ -1,0 +1,32 @@
+
+
+header{
+    height: 100vh;
+    background-color:#EAEDED;
+}
+.navbar{
+    background-color: rgba(118, 236, 109, 0.634);
+    margin-bottom: 50px;
+}
+
+.imgFont{
+    height: 100%;
+    border: 1px solid rgba(91, 244, 91, 0.719);
+    border-radius: 26% 74% 25% 75% / 71% 73% 27% 29% ;
+    background-color: rgba(118, 236, 109, 0.634);
+    transition: border-radius 1000ms ease-in-out;
+}
+.imgFont:hover{
+    border-radius: 59% 41% 31% 69% / 47% 68% 32% 53% 
+}
+ul li:hover{
+    padding-bottom: -10px;
+    border-bottom: 4px solid rgb(36, 162, 16);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.titreLogo>h1{
+    font-size: 120px;
+}
