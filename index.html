@@ -12,7 +12,7 @@
 </head>
 <body>
  
-    <header>
+    <header id="Home">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
               <a class="navbar-brand" href="#"><img src="images/logo.png" class="w-25" alt=""></a>
@@ -22,16 +22,16 @@
               <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" aria-current="page" href="#Home">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#About">About</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Store</a>
+                    <a class="nav-link" href="#Store">Store</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#Contact">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -50,14 +50,14 @@
                 <span class="titreLogo"><h1>Natural</h1></span>
                 <p>Great indoor Gardens</p>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque quisquam harum repellat hic magnam quis alias beatae obcaecati sed tempore voluptatibus non numquam adipisci quaerat natus unde ab, nobis eligendi eaque itaque corporis. </p>
-                <div class="w-100 d-flex justify-content-center my-5">
+                <div class="container text-center my-5 d-none d-lg-block">
                   <button class="btn readMore">READ MORE TIPS</button>
                 </div> 
-                <div class="container d-flex justify-content-center">
-                  <span class="iconEnTete"><i class="bi bi-twitter"></i></span>
-                  <span class="iconEnTete"><i class="bi bi-youtube"></i></span>
-                  <span class="iconEnTete"><i class="bi bi-facebook"></i></span>
-                  <span class="iconEnTete"><i class="bi bi-instagram"></i></span>
+                <div class="container text-center d-none d-lg-block">
+                  <span class="iconEnTete"><a href="https://twitter.com"><i class="bi bi-twitter"></i></a></span>
+                  <span class="iconEnTete"><a href="https://youtube.com"><i class="bi bi-youtube"></i></a></span>
+                  <span class="iconEnTete"><a href="https://facebook.com"><i class="bi bi-facebook"></i></a></span>
+                  <span class="iconEnTete"><a href="https://instagram.com"><i class="bi bi-instagram"></i></a></span>
                 </div> 
               </div>
              
@@ -68,7 +68,7 @@
               </div>
             </div>
           </div>
-          <div class="container containerInfo">
+          <div class="container containerInfo ">
             <div class="row mt-5">
               <div class="col text-center"> 
                 <i class="fas fa-store fa-2x iconeEnTete"></i>
@@ -88,11 +88,14 @@
               </div>
             </div>
           </div>
+          <div class="container text-center">
+           <a href="#About"><i class="bi bi-chevron-double-down btnDown"></i></a>
+          </div>
               
     </header>
     <main>
-        <section>
-          <h1>seconde section</h1>
+        <section id="About">
+          <h1>Section About</h1>
         </section>
     </main>
 
