@@ -55,10 +55,52 @@ ul li:hover{
     background-color: #22c516a2;
     color: white;
 }
+.feulmere{
+    position: relative;
+}
+.feulmere2{
+    position: relative;
+}
 .feuil1{
     width: 50px;
     position: absolute;
-    rotate: 92deg;
+    transform: rotate(92deg);
     margin-top: 15px;
     margin-left: -5px;
+}
+.feuil2{
+    width: 60px;
+    position: absolute;
+    top: 395px;
+    left: 95px;
+}
+.feuil3{
+    width: 50px;
+    position: absolute;
+    transform: rotate(192deg);
+    top: 175px;
+    left: 395px;
+}
+.feuil21{
+    width: 80px;
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    transition: top 500ms ease-in-out;
+}
+.feuil21:hover{
+    top: 55px;
+    right: 35px;
+}
+.feuil22{
+    width: 80px;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    transform: rotate(120deg);
+    transition: transform 500ms ease-in-out;
+}
+.feuil22:hover{
+    transform: rotate(220deg);
+    left: 25px;
 }
