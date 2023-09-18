@@ -9,6 +9,7 @@ html{
 header{
     height: 100vh;
     background-color:#EAEDED;
+    overflow: hidden;
 }
 .navbar{
     background-color: #76ec6da2;
@@ -129,7 +130,29 @@ ul li:hover{
     width: 20px;
     border-radius: 50%;
 }
+/* ==========================fin header========================= */
+#About{
+    height: 100vh;
+}
+.titreAbout{
+    font-size: 50px;
+    font-family: 'Abril FatFace',cursive;
+}
+.btncircle{
+    border: 1px solid black;
+    border-radius: 100%;
+    width: 1px;
+    height: 10px;
+}
 
+
+
+
+
+
+
+
+/* ==========================MediaQuery========================= */
 @media screen and (max-width: 768px){
     .navbar{
         margin-bottom: 5px;
