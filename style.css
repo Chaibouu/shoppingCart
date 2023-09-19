@@ -144,12 +144,62 @@ ul li:hover{
     width: 1px;
     height: 10px;
 }
+/* ==========================fin About========================= */
+#OurStore{
+    height:100vh;
+}
+.store{
+    color: #76ec6da2;
+}
+.titreStore{
+    margin-top:50px;
+}
+.btnfiltre{
+    border: 1px solid #76ec6da2;
+    border-radius: 10px;
+    font-weight: 600;
+    margin:3%;
+}
+.btnfiltre:hover{
+    background-color: #76ec6da2;
+    color: white;
+}
+.btnSearch{
+    border: 1px solid #76ec6da2;
+}
 
+.inputsearch:focus {
+    border-color:  #76ec6da2;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #76ec6da2;
+}
 
-
-
-
-
+.btnSearch:hover{
+    background-color: #76ec6da2;
+    color: white;
+}
+.carteimg{
+    width:30px;
+    height:380px;
+}
+.carteimg:hover{
+    background-color: red;
+}
+.carteimg>img{
+    max-width: 100%;
+    max-height: 100%;
+}
+/* ==========================fin store========================= */
+/* couleur des etoile */
+.colorEtoile{
+    color: #f5ee2e;
+}
+.colorEtoilee{
+    color: white;
+}
+.piedCarte{
+    width: 100%;
+    background-color:rgba(214, 209, 209, 0.297)
+}
 
 
 /* ==========================MediaQuery========================= */
