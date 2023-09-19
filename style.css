@@ -223,7 +223,10 @@ footer{
     width: 100%;
     background-color:#76ec6da2;
 }
-
+hr{
+    color: rgba(128, 128, 128, 0.361);
+    width: 100%;
+}
 
 /* ==========================MediaQuery========================= */
 @media screen and (max-width: 768px){
