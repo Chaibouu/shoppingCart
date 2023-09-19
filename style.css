@@ -145,9 +145,7 @@ ul li:hover{
     height: 10px;
 }
 /* ==========================fin About========================= */
-#OurStore{
-    height:100vh;
-}
+
 .store{
     color: #76ec6da2;
 }
@@ -198,7 +196,7 @@ ul li:hover{
 }
 .piedCarte{
     width: 100%;
-    background-color:rgba(214, 209, 209, 0.297)
+    background-color:#76ec6da2;
 }
 
 
