@@ -1,238 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
- 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
     <header id="Home">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="images/logo.png" class="w-25" alt=""></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#Home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#About">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#OurStore">Store</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#Contact">Contact</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="d-none d-lg-block">
-                <button title="btn" class="btn"><i class="bi bi-cart3"></i></button>
-                <span>prix du panier</span>
-              </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="images/logo.png" class="w-25" alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#Home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#About">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#OurStore">Store</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-none d-lg-block">
+            <button title="btn" class="btn"><i class="bi bi-cart3"></i></button>
+            <span>prix du panier</span>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-6 feulmere">
+            <img src="images/1.png" class="feuil1" alt="" />
+            <img src="images/1.png" class="feuil2" alt="" />
+            <img src="images/1.png" class="feuil3" alt="" />
+            <span class="titreLogo">
+              <h1>Natural</h1>
+            </span>
+            <p>Great indoor Gardens</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque
+              quisquam harum repellat hic magnam quis alias beatae obcaecati sed
+              tempore voluptatibus non numquam adipisci quaerat natus unde ab,
+              nobis eligendi eaque itaque corporis.
+            </p>
+            <div class="container text-center my-5 d-none d-lg-block">
+              <button class="btn readMore">READ MORE TIPS</button>
             </div>
-          </nav>
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-12 col-lg-6 feulmere">
-                <img src="images/1.png" class="feuil1" alt="">
-                <img src="images/1.png" class="feuil2" alt="">
-                <img src="images/1.png" class="feuil3" alt="">
-                <span class="titreLogo"><h1>Natural</h1></span>
-                <p>Great indoor Gardens</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque quisquam harum repellat hic magnam quis alias beatae obcaecati sed tempore voluptatibus non numquam adipisci quaerat natus unde ab, nobis eligendi eaque itaque corporis. </p>
-                <div class="container text-center my-5 d-none d-lg-block">
-                  <button class="btn readMore">READ MORE TIPS</button>
-                </div> 
-                <div class="container text-center d-none d-lg-block">
-                  <span class="iconEnTete"><a href="https://twitter.com"><i class="bi bi-twitter"></i></a></span>
-                  <span class="iconEnTete"><a href="https://youtube.com"><i class="bi bi-youtube"></i></a></span>
-                  <span class="iconEnTete"><a href="https://facebook.com"><i class="bi bi-facebook"></i></a></span>
-                  <span class="iconEnTete"><a href="https://instagram.com"><i class="bi bi-instagram"></i></a></span>
-                </div> 
-              </div>
-             
-              <div class="col-12 col-md-12 col-lg-6 d-flex justify-content-center feulmere2 ">
-                <img src="images/2.png" class="feuil21" alt="">
-                <img src="images/2.png" class="feuil22" alt="">
-                <img src="images/usine-peperomia-pasteque-faux-dans-pot-gris-removebg-preview.png" class="imgFont" alt="">
-              </div>
+            <div class="container text-center d-none d-lg-block">
+              <span class="iconEnTete"
+                ><a title="link" href="https://twitter.com"
+                  ><i class="bi bi-twitter"></i></a
+              ></span>
+              <span class="iconEnTete"
+                ><a title="link" href="https://youtube.com"
+                  ><i class="bi bi-youtube"></i></a
+              ></span>
+              <span class="iconEnTete"
+                ><a title="link" href="https://facebook.com"
+                  ><i class="bi bi-facebook"></i></a
+              ></span>
+              <span class="iconEnTete"
+                ><a title="link" href="https://instagram.com"
+                  ><i class="bi bi-instagram"></i></a
+              ></span>
             </div>
           </div>
-          <div class="container containerInfo ">
-            <div class="row mt-5">
-              <div class="col text-center"> 
-                <i class="fas fa-store fa-2x iconeEnTete"></i>
-                <p>Nos magasins à votre service pour vos besoin en plante</p>
-              </div>
-              <div class="col text-center">
-                <i class="fas fa-people-carry fa-2x iconeEnTete"></i>
-                <p>Retrait en magasin sans contact</p>
-              </div>
-              <div class="col text-center">
-                <i class="fas fa-truck fa-2x iconeEnTete"></i>
-                <p>Livraison à domicile sans frais supplementaire</p>
-              </div>
-              <div class="col text-center">
-                <i class="fa-solid fa-handshake-angle fa-2x iconeEnTete"></i>
-                <p>Assistance Technique à la demande</p>
-              </div>
-            </div>
+
+          <div
+            class="col-12 col-md-12 col-lg-6 d-flex justify-content-center feulmere2"
+          >
+            <img src="images/2.png" class="feuil21" alt="" />
+            <img src="images/2.png" class="feuil22" alt="" />
+            <img
+              src="images/usine-peperomia-pasteque-faux-dans-pot-gris-removebg-preview.png"
+              class="imgFont"
+              alt=""
+            />
           </div>
-          <div class="container text-center">
-           <a href="#About"><i class="bi bi-chevron-double-down btnDown"></i></a>
+        </div>
+      </div>
+      <div class="container containerInfo">
+        <div class="row mt-5">
+          <div class="col text-center">
+            <i class="fas fa-store fa-2x iconeEnTete"></i>
+            <p>Nos magasins à votre service pour vos besoin en plante</p>
           </div>
-              
+          <div class="col text-center">
+            <i class="fas fa-people-carry fa-2x iconeEnTete"></i>
+            <p>Retrait en magasin sans contact</p>
+          </div>
+          <div class="col text-center">
+            <i class="fas fa-truck fa-2x iconeEnTete"></i>
+            <p>Livraison à domicile sans frais supplementaire</p>
+          </div>
+          <div class="col text-center">
+            <i class="fa-solid fa-handshake-angle fa-2x iconeEnTete"></i>
+            <p>Assistance Technique à la demande</p>
+          </div>
+        </div>
+      </div>
+      <div class="container text-center">
+        <a title="chevron" href="#About"
+          ><i class="bi bi-chevron-double-down btnDown"></i
+        ></a>
+      </div>
     </header>
     <main>
-        <section id="About">
-          <h1 class="titreAbout">About</h1>
-          <div class="container">
-            <div class="row">
-              
-              <div class="col-12 col-md-6 col
-              -lg-6">
-                <img src="images/logo.png" alt="">
-                <p>lore</p>
-              </div>
-              <div class="col-12 col-md-6 col
-              -lg-6">
-                <div id="carouselExampleIndicators" class="carousel slide w-100">
-                  <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                  </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="images/deco interieur/1.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="images/deco interieur/2.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="images/deco interieur/3.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="images/deco interieur/4.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="images/deco interieur/5.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="images/deco interieur/6.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="images/deco interieur/7.jpg" class="d-block w-100" alt="...">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
+      <section id="About">
+        <h1 class="titreAbout">About</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-6">
+              <img src="images/logo.png" alt="" />
+              <p>lore</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <div id="carouselExampleIndicators" class="carousel slide w-100">
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="3"
+                    aria-label="Slide 4"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="4"
+                    aria-label="Slide 5"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="5"
+                    aria-label="Slide 6"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="6"
+                    aria-label="Slide 7"
+                  ></button>
                 </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/deco interieur/1.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/deco interieur/2.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/deco interieur/3.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/deco interieur/4.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/deco interieur/5.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/deco interieur/6.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/deco interieur/7.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
             </div>
           </div>
-
-        </section>
-        <section id="OurStore">
-          <div class="container text-center titreStore">
-            <h1 class="titreAbout">Our <span class="store">Store</span></h1>
-          </div>
-          <div class="container text-center w-75">
-            <button class="btn btnfiltre btnAll">ALL</button>
-            <button class="btn btnfiltre btnArbre">Arbres</button>
-            <button class="btn btnfiltre btnPalmier">Palmiers</button>
-            <button class="btn btnfiltre btnConifere">Conifères</button>
-            <button class="btn btnfiltre btnHerbace">Herbacées</button>
-            <button class="btn btnfiltre btnMousse">Mousses</button>
-          </div>
-          <div class="container d-flex justify-content-center align-item-center containerSearch">
-            <form class="d-flex w-75" role="search">
-              <input class="form-control me-2 inputsearch" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btnSearch" type="submit">Search</button>
-            </form>
-          </div>
-          <div class="container">
-            <div class="row d-flex justify-content-center containercarte">
-
+        </div>
+      </section>
+      <section id="OurStore">
+        <div class="container text-center titreStore">
+          <h1 class="titreAbout">Our <span class="store">Store</span></h1>
+        </div>
+        <div class="container text-center w-75">
+          <button class="btn btnfiltre btnAll">ALL</button>
+          <button class="btn btnfiltre btnArbre">Arbres</button>
+          <button class="btn btnfiltre btnPalmier">Palmiers</button>
+          <button class="btn btnfiltre btnConifere">Conifères</button>
+          <button class="btn btnfiltre btnHerbace">Herbacées</button>
+          <button class="btn btnfiltre btnMousse">Mousses</button>
+        </div>
+        <div
+          class="container d-flex justify-content-center align-item-center containerSearch"
+        >
+          <form class="d-flex w-75" role="search">
+            <input
+              class="form-control me-2 inputsearch"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btnSearch" type="submit">Search</button>
+          </form>
+        </div>
+        <div class="container">
+          <div class="row d-flex justify-content-center containercarte"></div>
+        </div>
+      </section>
+      <section id="Contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-6 container text-center">
+              <h1 class="titreAbout">Contact Me</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Accusantium autem saepe omnis ipsum asperiores. Totam nihil
+                dolorum ea modi culpa porro omnis cupiditate neque consequuntur,
+                quis recusandae, fuga perspiciatis quam, corrupti cum corporis
+                numquam nostrum fugiat beatae delectus cumque quaerat? Dolore
+                recusandae inventore corporis laudantium beatae consequatur nemo
+                nostrum delectus!
+              </p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6">
+              <form>
+                <div class="mb-3 d-flex">
+                  <input
+                    type="text"
+                    class="form-control me-2 inputcontact"
+                    aria-describedby="emailHelp"
+                    placeholder="First Name"
+                  />
+                  <input
+                    type="text"
+                    class="form-control inputcontact"
+                    aria-describedby="emailHelp"
+                    placeholder="Last Name"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control inputcontact"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Email address"
+                  />
+                </div>
+                <div class="form-floating mb-3">
+                  <textarea
+                    class="form-control inputcontact"
+                    placeholder="Leave a comment here"
+                    id="floatingTextarea2"
+                    style="height: 100px"
+                  ></textarea>
+                  <label for="floatingTextarea2">Comments</label>
+                </div>
+                <button type="submit" class="btn btnContact">Submit</button>
+              </form>
             </div>
           </div>
-        </section>
-        <section id="Contact">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-12 col-lg-6 container text-center">
-                <h1 class="titreAbout">Contact Me</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium autem saepe omnis ipsum asperiores. Totam nihil dolorum ea modi culpa porro omnis cupiditate neque consequuntur, quis recusandae, fuga perspiciatis quam, corrupti cum corporis numquam nostrum fugiat beatae delectus cumque quaerat? Dolore recusandae inventore corporis laudantium beatae consequatur nemo nostrum delectus!</p>
-              </div>
-              <div class="col-12 col-md-12 col-lg-6">
-                <form>
-                  <div class="mb-3 d-flex">
-                    <input type="text" class="form-control me-2 inputcontact" aria-describedby="emailHelp" placeholder="First Name">
-                    <input type="text" class="form-control inputcontact" aria-describedby="emailHelp" placeholder="Last Name">
-                  </div>
-                  <div class="mb-3">
-                    <input type="email" class="form-control inputcontact" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address">
-                  </div>
-                  <div class="form-floating mb-3">
-                    <textarea class="form-control inputcontact" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                    <label for="floatingTextarea2">Comments</label>
-                  </div>
-                  <button type="submit" class="btn btnContact">Submit</button>
-                </form>
-              </div>
-            </div>
-          </div>
-          
-        </section>
-        
+        </div>
+      </section>
     </main>
-    <section class="container-fluid mb-3 ">
+    <section class="container-fluid mb-3">
       <div class="container-fluid w-100 text-center mt-4">
         <h3 class="text-secondary">Natural@gmail.com</h3>
-        <hr>
+        <hr />
         <div class="container text-center">
-          <span class="iconEnTete"><a title="link" href="https://twitter.com"><i class="bi bi-twitter"></i></a></span>
-          <span class="iconEnTete"><a title="link" href="https://youtube.com"><i class="bi bi-youtube"></i></a></span>
-          <span class="iconEnTete"><a title="link" href="https://facebook.com"><i class="bi bi-facebook"></i></a></span>
-          <span class="iconEnTete"><a title="link" href="https://instagram.com"><i class="bi bi-instagram"></i></a></span>
-        </div> 
+          <span class="iconEnTete"
+            ><a title="link" href="https://twitter.com"
+              ><i class="bi bi-twitter"></i></a
+          ></span>
+          <span class="iconEnTete"
+            ><a title="link" href="https://youtube.com"
+              ><i class="bi bi-youtube"></i></a
+          ></span>
+          <span class="iconEnTete"
+            ><a title="link" href="https://facebook.com"
+              ><i class="bi bi-facebook"></i></a
+          ></span>
+          <span class="iconEnTete"
+            ><a title="link" href="https://instagram.com"
+              ><i class="bi bi-instagram"></i></a
+          ></span>
+        </div>
       </div>
     </section>
     <footer class="container-fluid m-0">
-      <div class="container text-center p-4">copyright © Natural-2023 </div>
+      <div class="container text-center p-4">copyright © Natural-2023</div>
     </footer>
 
-
-
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
     <script src="datas.js"></script>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
