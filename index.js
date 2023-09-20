@@ -12,12 +12,13 @@ let cardd = document.querySelector('.cardd');
 let containerpanier = document.querySelector('.containerpanier');
 
 // initialisation du tableau
-const tab =[];
+
+
 if(!localStorage.getItem('cles')){
-    localStorage.setItem('cles',JSON.stringify(tab))
+    localStorage.setItem('cles',JSON.stringify([]))
 }
-
-
+let tab = JSON.parse(localStorage.getItem('cles'));
+console.log(tab);
 //la fonction affichage des données des produits depuis de datas
 const afficheProduit = (datas)=>{
     datas.forEach(element => {
@@ -44,19 +45,23 @@ const afficheProduit = (datas)=>{
 
     // button ajouter au panier
     let iconajoute = document.querySelectorAll('.iconajoute');
+    let produit={
+        index : '',
+        nom : '',
+        prix : '',
+       }
     for (let i = 0; i < iconajoute.length; i++) {
         iconajoute[i].style.cursor= 'pointer';
         iconajoute[i].addEventListener('click',()=>{
             iconajoute[i].style.background='red';
-            let produit={
-                 index : datas[i].index,
-                 nom : datas[i].libelle,
-                 prix :datas[i].prix,
-                }
-            localStorage.getItem('cles');
+            produit={
+                index : datas[i].index,
+                nom : datas[i].libelle,
+                prix :datas[i].prix,
+            }
+            
             tab.push(produit)
-            console.log(produit);
-            localStorage.setItem('cles',JSON.stringify(tab));
+            
 
             let div = document.createElement('div');
             containerpanier.append(div);
@@ -71,6 +76,7 @@ const afficheProduit = (datas)=>{
             let spann = document.createElement('span');
             div.append(spann);
             spann.innerHTML = `<i class="bi bi-trash"></i>`;
+            updateTab() 
         })    
     }
 
@@ -177,3 +183,6 @@ for (let i = 0; i < btnEtoile.length; i++) {
     
 }
 
+function updateTab() {
+    localStorage.setItem('cles',JSON.stringify(tab))
+}
