@@ -7,7 +7,10 @@ let btnHerbace = document.querySelector('.btnHerbace');
 let btnMousse = document.querySelector('.btnMousse');
 let inputsearch = document.querySelector('.inputsearch');
 let btnSearch = document.querySelector('.btnSearch');
+let btnpanier = document.querySelector('.btnpanier');
+let cardd = document.querySelector('.cardd');
 
+// initialisation du tableau
 const tab =[];
 if(!localStorage.getItem('cles')){
     localStorage.setItem('cles',JSON.stringify(tab))
@@ -37,25 +40,9 @@ const afficheProduit = (datas)=>{
         </div>
       </div>`
     });
+
+    // button ajouter au panier
     let iconajoute = document.querySelectorAll('.iconajoute');
-    // iconajoute.forEach(element => {
-    //     element.style.cursor= 'pointer';
-    //     element.addEventListener('click',()=>{
-    //         element.style.background='red'
-    //         datas.forEach(element => {
-    //             let produit={
-    //                 index : element.index,
-    //                 produit : element.lebelle,
-    //                 prix :element.prix,
-    //             }
-    //             console.log(produit);
-    //         });
-            
-            
-    //     })
-    // });
-
-
     for (let i = 0; i < iconajoute.length; i++) {
         iconajoute[i].style.cursor= 'pointer';
         iconajoute[i].addEventListener('click',()=>{
@@ -69,14 +56,16 @@ const afficheProduit = (datas)=>{
             tab.push(produit)
             console.log(produit);
             localStorage.setItem('cles',JSON.stringify(tab));
-                
-           
         })
-        
     }
+
+    // button affichage du panier
+    btnpanier.addEventListener('click', () => {
+      cardd.classList.toggle('hidden')
+    });
+ 
 }
 afficheProduit(datas)
-
 
 // les boutton filtrer===========================================================
 

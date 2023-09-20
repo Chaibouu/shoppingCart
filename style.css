@@ -12,6 +12,7 @@ header{
     height: 100vh;
     background-color:#EAEDED;
     overflow: hidden;
+    position: relative;
 }
 
 .navbar{
@@ -98,8 +99,8 @@ ul li:hover{
 .feuil21{
     width: 80px;
     position: absolute;
-    top: 15px;
-    right: 5px;
+    top: 17rem;
+    right: -5rem;
     transition: top 500ms ease-in-out;
 }
 .feuil21:hover{
@@ -256,6 +257,18 @@ hr{
 .btnpanier:hover{
     border :1px solid black;
     background-Color: #19e80aa2;
+}
+.cardd{
+    position:absolute;
+    top: 6rem;
+    right:5px;
+    padding:10px;
+    border: 1px solid  #19e80aa2;
+    border-radius:10px;
+    background-color:rgba(255, 255, 255, 0.54);
+}
+.hidden{
+    display:none !important;
 }
 /* ==========================MediaQuery========================= */
 @media screen and (max-width: 768px){
