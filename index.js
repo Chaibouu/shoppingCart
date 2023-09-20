@@ -10,6 +10,7 @@ let btnSearch = document.querySelector('.btnSearch');
 
 
 
+
 //la fonction affichage des données des produits depuis de datas
 const afficheProduit = (datas)=>{
     datas.forEach(element => {
@@ -17,6 +18,7 @@ const afficheProduit = (datas)=>{
         <div class="carteimg w-100 "> 
             <img src=${element.url} class="card-img-top" alt="...">
         </div>
+        <div class='container text-end fs-3 iconajoute'><i class="fa-solid fa-cart-arrow-down"></i></div>
         <div class="card-body  piedCarte">
           <div class="text-end">
             <i class="fa-regular fa-star btnEtoile"></i>
@@ -32,6 +34,39 @@ const afficheProduit = (datas)=>{
         </div>
       </div>`
     });
+    let iconajoute = document.querySelectorAll('.iconajoute');
+    // iconajoute.forEach(element => {
+    //     element.style.cursor= 'pointer';
+    //     element.addEventListener('click',()=>{
+    //         element.style.background='red'
+    //         datas.forEach(element => {
+    //             let produit={
+    //                 index : element.index,
+    //                 produit : element.lebelle,
+    //                 prix :element.prix,
+    //             }
+    //             console.log(produit);
+    //         });
+            
+            
+    //     })
+    // });
+    for (let i = 0; i < iconajoute.length; i++) {
+        iconajoute[i].style.cursor= 'pointer';
+        iconajoute[i].addEventListener('click',()=>{
+            iconajoute[i].style.background='red';
+            for (let j = 0; j < datas.length; j++) {
+                let produit={
+                     index : datas[j].index,
+                     produit : datas[j].lebelle,
+                     prix :datas[j].prix,
+                    }
+                console.log(produit);
+                
+            }
+        })
+        
+    }
 }
 afficheProduit(datas)
 
