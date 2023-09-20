@@ -54,13 +54,15 @@ const afficheProduit = (datas)=>{
             
     //     })
     // });
+
+
     for (let i = 0; i < iconajoute.length; i++) {
         iconajoute[i].style.cursor= 'pointer';
         iconajoute[i].addEventListener('click',()=>{
             iconajoute[i].style.background='red';
             let produit={
                  index : datas[i].index,
-                 nom : datas[i].lebelle,
+                 nom : datas[i].libelle,
                  prix :datas[i].prix,
                 }
             localStorage.getItem('cles');
