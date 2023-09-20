@@ -8,7 +8,10 @@ let btnMousse = document.querySelector('.btnMousse');
 let inputsearch = document.querySelector('.inputsearch');
 let btnSearch = document.querySelector('.btnSearch');
 
-
+const tab =[];
+if(!localStorage.getItem('cles')){
+    localStorage.setItem('cles',JSON.stringify(tab))
+}
 
 
 //la fonction affichage des données des produits depuis de datas
@@ -55,15 +58,17 @@ const afficheProduit = (datas)=>{
         iconajoute[i].style.cursor= 'pointer';
         iconajoute[i].addEventListener('click',()=>{
             iconajoute[i].style.background='red';
-            for (let j = 0; j < datas.length; j++) {
-                let produit={
-                     index : datas[j].index,
-                     produit : datas[j].lebelle,
-                     prix :datas[j].prix,
-                    }
-                console.log(produit);
+            let produit={
+                 index : datas[i].index,
+                 nom : datas[i].lebelle,
+                 prix :datas[i].prix,
+                }
+            localStorage.getItem('cles');
+            tab.push(produit)
+            console.log(produit);
+            localStorage.setItem('cles',JSON.stringify(tab));
                 
-            }
+           
         })
         
     }
