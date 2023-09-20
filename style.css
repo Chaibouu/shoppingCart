@@ -266,9 +266,19 @@ hr{
     border: 1px solid  #19e80aa2;
     border-radius:10px;
     background-color:rgba(255, 255, 255, 0.54);
+    z-index: 1;
 }
 .hidden{
     display:none !important;
+}
+.divvv{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.imggg{
+    height: 50px;
+    width: 50px;
 }
 /* ==========================MediaQuery========================= */
 @media screen and (max-width: 768px){

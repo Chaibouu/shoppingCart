@@ -9,6 +9,7 @@ let inputsearch = document.querySelector('.inputsearch');
 let btnSearch = document.querySelector('.btnSearch');
 let btnpanier = document.querySelector('.btnpanier');
 let cardd = document.querySelector('.cardd');
+let containerpanier = document.querySelector('.containerpanier');
 
 // initialisation du tableau
 const tab =[];
@@ -56,7 +57,21 @@ const afficheProduit = (datas)=>{
             tab.push(produit)
             console.log(produit);
             localStorage.setItem('cles',JSON.stringify(tab));
-        })
+
+            let div = document.createElement('div');
+            containerpanier.append(div);
+            div.classList.add('divvv')
+            let img = document.createElement('img');
+            img.classList.add('imggg')
+            img.src = datas[i].url;
+            div.append(img)
+            let div2 = document.createElement('div');
+            div.append(div2);
+            div2.textContent = datas[i].libelle + ' : ' + datas[i].prix
+            let spann = document.createElement('span');
+            div.append(spann);
+            spann.innerHTML = `<i class="bi bi-trash"></i>`;
+        })    
     }
 
     // button affichage du panier
