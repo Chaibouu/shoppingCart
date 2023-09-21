@@ -87,10 +87,11 @@ const afficheProduit = (datas)=>{
     // button ajouter au panier
     let iconajoute = document.querySelectorAll('.iconajoute');
     let produit={
-        index : '',
+        index : 0,
         nom : '',
-        prix : '',
-        quantiter : '',
+        prix : 0,
+        url : '',
+        quantiter : 0,
        }
     for (let i = 0; i < iconajoute.length; i++) {
         iconajoute[i].style.cursor= 'pointer';
@@ -104,12 +105,13 @@ const afficheProduit = (datas)=>{
                 url : datas[i].url,
                 quantiter : 1,
             }
-            // let stock = JSON.parse(localStorage.getItem('cles'));
+          
             let filtreta = tab.find((ta)=>ta.index == produit.index);
-            console.log(filtreta);
-  
             if (filtreta) {
-
+                filtreta.prix += produit.prix;
+                filtreta.quantiter ++;
+                updateTab() 
+                infopanier();
             }
             else{
                 tab.push(produit)
