@@ -109,15 +109,7 @@ const afficheProduit = (datas)=>{
             console.log(filtreta);
   
             if (filtreta) {
-                // let tt = tab[i].prix;
-                // console.log(tab[i].quantiter);
-                // tab[i].prix = Number(tt) + Number(datas[i].prix);
-                tab[i].quantiter = Number(tab[i].quantiter) + 1;
 
-                updateTab() 
-                
-                // function pour ajouter des info au panier
-                infopanier();
             }
             else{
                 tab.push(produit)
