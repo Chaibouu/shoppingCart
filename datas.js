@@ -24,13 +24,13 @@ let datas = [
         index: 3,
         libelle : "Conifère",
         url: "../images/plantes/4.png",
-        prix : 1000,
+        prix : 2500,
     },
     {
         index: 4,
         libelle : "Arbuste",
         url: "../images/plantes/5.png",
-        prix : 1000,
+        prix : 4000,
     },
     {
         index: 5,

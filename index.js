@@ -10,6 +10,7 @@ let btnSearch = document.querySelector('.btnSearch');
 let btnpanier = document.querySelector('.btnpanier');
 let cardd = document.querySelector('.cardd');
 let containerpanier = document.querySelector('.containerpanier');
+let clearCart = document.querySelector('.clearCart')
 
 // initialisation du tableau
 
@@ -18,7 +19,47 @@ if(!localStorage.getItem('cles')){
     localStorage.setItem('cles',JSON.stringify([]))
 }
 let tab = JSON.parse(localStorage.getItem('cles'));
-console.log(tab);
+
+// function pour ajouter des info au panier
+function infopanier() {
+    let tabb = JSON.parse(localStorage.getItem('cles'));
+    containerpanier.innerHTML= '';
+    tabb.forEach(element => {
+        let div = document.createElement('div');
+        containerpanier.append(div);
+        div.classList.add('divvv')
+        let img = document.createElement('img');
+        img.classList.add('imggg')
+        img.src = element.url;
+        div.append(img)
+        let div2 = document.createElement('div');
+        div.append(div2);
+        div2.textContent =element.quantiter + ' X ' + element.nom + ' : ' + element.prix
+        let spann = document.createElement('span');
+        div.append(spann);
+        spann.innerHTML = `<i class="bi bi-trash"></i>`;
+     });
+
+     // button supprimer produit dans panier
+     let sup = document.querySelectorAll('.bi-trash');
+     let tabbb = JSON.parse(localStorage.getItem('cles'));
+     sup.forEach((element,indexx) =>{
+        element.style.cursor = 'pointer';
+         element.addEventListener('click',(e)=>{ 
+            let asup = e.target.parentElement.parentElement;
+            asup.remove();
+            let filtabbb = tabbb.filter((produit)=> produit.index !== indexx);
+            console.log(filtabbb);
+            
+
+         })
+     });
+    //  button clear cart pour restore le localstorage
+    clearCart.addEventListener('click',()=>{
+        localStorage.clear();
+        document.location.reload();
+    })
+}
 //la fonction affichage des données des produits depuis de datas
 const afficheProduit = (datas)=>{
     datas.forEach(element => {
@@ -49,34 +90,45 @@ const afficheProduit = (datas)=>{
         index : '',
         nom : '',
         prix : '',
+        quantiter : '',
        }
     for (let i = 0; i < iconajoute.length; i++) {
         iconajoute[i].style.cursor= 'pointer';
         iconajoute[i].addEventListener('click',()=>{
+
             iconajoute[i].style.background='red';
             produit={
                 index : datas[i].index,
                 nom : datas[i].libelle,
-                prix :datas[i].prix,
+                prix : datas[i].prix,
+                url : datas[i].url,
+                quantiter : 1,
             }
-            
-            tab.push(produit)
-            
+            // let stock = JSON.parse(localStorage.getItem('cles'));
+            let filtreta = tab.find((ta)=>ta.index == produit.index);
+            console.log(filtreta);
+  
+            if (filtreta) {
+                // let tt = tab[i].prix;
+                // console.log(tab[i].quantiter);
+                // tab[i].prix = Number(tt) + Number(datas[i].prix);
+                tab[i].quantiter = Number(tab[i].quantiter) + 1;
 
-            let div = document.createElement('div');
-            containerpanier.append(div);
-            div.classList.add('divvv')
-            let img = document.createElement('img');
-            img.classList.add('imggg')
-            img.src = datas[i].url;
-            div.append(img)
-            let div2 = document.createElement('div');
-            div.append(div2);
-            div2.textContent = datas[i].libelle + ' : ' + datas[i].prix
-            let spann = document.createElement('span');
-            div.append(spann);
-            spann.innerHTML = `<i class="bi bi-trash"></i>`;
-            updateTab() 
+                updateTab() 
+                
+                // function pour ajouter des info au panier
+                infopanier();
+            }
+            else{
+                tab.push(produit)
+                // function mettre a jour localstorage
+                updateTab() 
+                // function pour ajouter des info au panier
+                infopanier();
+            }
+        
+            
+            
         })    
     }
 
@@ -182,7 +234,9 @@ for (let i = 0; i < btnEtoile.length; i++) {
     })
     
 }
-
+// function pour ajouter des info au panier
+infopanier()
+// function mettre a jour localstorage
 function updateTab() {
     localStorage.setItem('cles',JSON.stringify(tab))
 }
