@@ -220,9 +220,10 @@ footer{
     text-align: center;
     position: sticky;
     left: 100%;
-    top: 10rem;
+    top: 9rem;
     z-index: 9999;
     display: none;
+    margin: 0;
 }
 
 /* ==========================fin store========================= */
