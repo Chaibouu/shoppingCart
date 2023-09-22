@@ -218,8 +218,10 @@ footer{
     width: 330px;
     border-radius: 4px;
     text-align: center;
-    position: absolute;
-    right: 0;
+    position: sticky;
+    left: 100%;
+    top: 10rem;
+    z-index: 9999;
     display: none;
 }
 
