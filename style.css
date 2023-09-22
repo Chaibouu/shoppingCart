@@ -148,6 +148,10 @@ ul li:hover{
     width: 1px;
     height: 10px;
 }
+.imgAbout{
+    width:90px;
+    float: left;
+}
 /* ==========================fin About========================= */
 
 .store{
@@ -280,6 +284,7 @@ hr{
     height: 50px;
     width: 50px;
 }
+
 /* ==========================MediaQuery========================= */
 @media screen and (max-width: 768px){
     .navbar{

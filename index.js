@@ -10,11 +10,11 @@ let btnSearch = document.querySelector('.btnSearch');
 let btnpanier = document.querySelector('.btnpanier');
 let cardd = document.querySelector('.cardd');
 let containerpanier = document.querySelector('.containerpanier');
-let clearCart = document.querySelector('.clearCart')
+let clearCart = document.querySelector('.clearCart');
+let panier = document.querySelector('.panier');
+let prixTotalPanier = document.querySelector('.prixTotalPanier');
 
 // initialisation du tableau
-
-
 if(!localStorage.getItem('cles')){
     localStorage.setItem('cles',JSON.stringify([]))
 }
@@ -37,29 +37,51 @@ function infopanier() {
         div2.textContent =element.quantiter + ' X ' + element.nom + ' : ' + element.prix
         let spann = document.createElement('span');
         div.append(spann);
-        spann.innerHTML = `<i class="bi bi-trash"></i>`;
+        spann.innerHTML = `<i class="bi bi-trash"><span class="hidden"> ${element.index}</span></i>`;
      });
-
+     
      // button supprimer produit dans panier
      let sup = document.querySelectorAll('.bi-trash');
      let tabbb = JSON.parse(localStorage.getItem('cles'));
      sup.forEach((element,indexx) =>{
         element.style.cursor = 'pointer';
          element.addEventListener('click',(e)=>{ 
+            let tt = element.textContent;
             let asup = e.target.parentElement.parentElement;
             asup.remove();
-            let filtabbb = tabbb.filter((produit)=> produit.index !== indexx);
-            console.log(filtabbb);
-            
-
+            tabFilter=[];
+            tabbb.forEach((element) =>{
+                if (element.index != tt){
+                    tabFilter.push(element);
+                    tabbb = tabFilter;
+                }
+            })
+            localStorage.setItem('cles',JSON.stringify(tabbb));
+            infopanier();
          })
+         
      });
     //  button clear cart pour restore le localstorage
     clearCart.addEventListener('click',()=>{
         localStorage.clear();
         document.location.reload();
     })
+    
 }
+// fonction permettent d'ajouter le total du panier
+function affTotal(){
+    const total = ()=>{
+        let total=0;
+        for(let i =0; i<tab.length;i++){
+            total = Number(total) + Number(tab[i].prix)
+        }
+        return total;
+    }
+    total();
+    panier.textContent = total() + ' F CFA';
+    prixTotalPanier.textContent = 'Total  : ' + total() + ' F CFA';
+}
+affTotal()
 //la fonction affichage des données des produits depuis de datas
 const afficheProduit = (datas)=>{
     datas.forEach(element => {
@@ -96,8 +118,6 @@ const afficheProduit = (datas)=>{
     for (let i = 0; i < iconajoute.length; i++) {
         iconajoute[i].style.cursor= 'pointer';
         iconajoute[i].addEventListener('click',()=>{
-
-            iconajoute[i].style.background='red';
             produit={
                 index : datas[i].index,
                 nom : datas[i].libelle,
@@ -112,6 +132,7 @@ const afficheProduit = (datas)=>{
                 filtreta.quantiter ++;
                 updateTab() 
                 infopanier();
+                affTotal()
             }
             else{
                 tab.push(produit)
@@ -119,18 +140,14 @@ const afficheProduit = (datas)=>{
                 updateTab() 
                 // function pour ajouter des info au panier
                 infopanier();
+                 affTotal()
             }
-        
-            
-            
         })    
     }
-
     // button affichage du panier
     btnpanier.addEventListener('click', () => {
       cardd.classList.toggle('hidden')
     });
- 
 }
 afficheProduit(datas)
 
@@ -185,9 +202,6 @@ btnSearch.addEventListener('click',()=>{
     }
 
 })
-
-
-
 
 
 
