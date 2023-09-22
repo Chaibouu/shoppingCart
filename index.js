@@ -13,6 +13,7 @@ let containerpanier = document.querySelector('.containerpanier');
 let clearCart = document.querySelector('.clearCart');
 let panier = document.querySelector('.panier');
 let prixTotalPanier = document.querySelector('.prixTotalPanier');
+let confirm = document.querySelector('.confirm');
 
 // initialisation du tableau
 if(!localStorage.getItem('cles')){
@@ -142,6 +143,12 @@ const afficheProduit = (datas)=>{
                 infopanier();
                  affTotal()
             }
+            confirm.style.display = 'block'
+            setTimeout(() => {
+                confirm.style.display = 'none'
+                
+            }, 2000);
+        
         })    
     }
     // button affichage du panier

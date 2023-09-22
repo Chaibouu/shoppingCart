@@ -213,6 +213,16 @@ ul li:hover{
 footer{
     background-color: #76ec6da2;
 }
+.confirm{
+    background-color: #76ec6da2;
+    width: 330px;
+    border-radius: 4px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    display: none;
+}
+
 /* ==========================fin store========================= */
 /* couleur des etoile */
 .colorEtoile{
