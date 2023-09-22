@@ -213,6 +213,9 @@ ul li:hover{
 footer{
     background-color: #76ec6da2;
 }
+.imgLogo{
+    position: absolute;
+}
 .confirm{
     background-color: #76ec6da2;
     width: 330px;
