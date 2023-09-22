@@ -59,6 +59,16 @@ function infopanier() {
             })
             localStorage.setItem('cles',JSON.stringify(tabbb));
             infopanier();
+            const total = ()=>{
+                let total=0;
+                for(let i =0; i<tabbb.length;i++){
+                    total = Number(total) + Number(tab[i].prix)
+                }
+                return total;
+            }
+            total();
+            panier.textContent = total() + ' F CFA';
+            prixTotalPanier.textContent = 'Total  : ' + total() + ' F CFA';
          })
          
      });

@@ -274,6 +274,9 @@ hr{
 .card:hover  .iconajoute>i{
     color:#76ec6da2;
 }
+.btnpanier{
+    margin-right: 70px;
+}
 .btnpanier:hover{
     border :1px solid black;
     background-Color: #19e80aa2;
