@@ -303,6 +303,14 @@ hr{
     height: 50px;
     width: 50px;
 }
+.caisseplante{
+    position: relative;
+}
+.containerAffichPlante{
+    position:sticky;
+    top: 10%;
+    z-index: 5;
+}
 
 /* ==========================MediaQuery========================= */
 @media screen and (max-width: 768px){

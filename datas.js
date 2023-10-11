@@ -3,7 +3,7 @@ let datas = [
         index: 0,
         libelle : "Palmier",
         url: "../images/plantes/1.png",
-        prix : 1000,
+        prix : 3000,
     },
 
     {
