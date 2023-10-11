@@ -277,6 +277,8 @@ for (let i = 0; i < btnEtoile.length; i++) {
     })
     
 }
+
+
 // function pour ajouter des info au panier
 infopanier()
 // function mettre a jour localstorage

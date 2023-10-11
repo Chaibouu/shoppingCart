@@ -312,6 +312,21 @@ hr{
     bottom: 5%;
     z-index: 5;
     display: none;
+    
+}
+.caisseplante{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#carouselExample{
+    width: 400px;
+    height: 800px;
+}
+#carouselExample>.carousel-inner>.carousel-item>img{
+    height: 800px;
+    
 }
 .sortieCaisse{
     position: absolute;
