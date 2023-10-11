@@ -17,12 +17,17 @@ let confirm = document.querySelector('.confirm');
 let containerAffichPlante = document.querySelector('.containerAffichPlante');
 let sortieCaisse = document.querySelector('.sortieCaisse');
 let Cclose = document.querySelector('.Cclose');
+let NombreItems = document.querySelector('.NombreItems');
 
 // initialisation du tableau
 if(!localStorage.getItem('cles')){
     localStorage.setItem('cles',JSON.stringify([]))
 }
+
 let tab = JSON.parse(localStorage.getItem('cles'));
+
+// fonctionnalité pour afficher le nombre de produit dans le panier
+NombreItems.textContent = tab.length + " Items :";
 
 // function pour ajouter des info au panier
 function infopanier() {
@@ -147,6 +152,8 @@ const afficheProduit = (datas)=>{
                 updateTab() 
                 infopanier();
                 affTotal()
+                // fonctionnalité pour afficher le nombre de produit dans le panier
+                NombreItems.textContent = tab.length + " Items :";
             }
             else{
                 tab.push(produit)
@@ -155,6 +162,8 @@ const afficheProduit = (datas)=>{
                 // function pour ajouter des info au panier
                 infopanier();
                  affTotal()
+                 // fonctionnalité pour afficher le nombre de produit dans le panier
+                NombreItems.textContent = tab.length + " Items :";
             }
             confirm.style.display = 'block'
             setTimeout(() => {
