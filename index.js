@@ -14,6 +14,9 @@ let clearCart = document.querySelector('.clearCart');
 let panier = document.querySelector('.panier');
 let prixTotalPanier = document.querySelector('.prixTotalPanier');
 let confirm = document.querySelector('.confirm');
+let containerAffichPlante = document.querySelector('.containerAffichPlante');
+let sortieCaisse = document.querySelector('.sortieCaisse');
+let Cclose = document.querySelector('.Cclose');
 
 // initialisation du tableau
 if(!localStorage.getItem('cles')){
@@ -165,6 +168,21 @@ const afficheProduit = (datas)=>{
     btnpanier.addEventListener('click', () => {
       cardd.classList.toggle('hidden')
     });
+    // fonctionnaliter afficher les images et background blanc
+    let afficcard = document.querySelectorAll('.card-img-top');
+    afficcard.forEach(element => {
+        element.style.cursor = "pointer"
+        element.addEventListener('click',()=>{
+            containerAffichPlante.style.display = 'block'
+            sortieCaisse.style.display = 'block'
+        })
+    });
+    // fonctionnaliter Cclose pour fermer le visionnage d'image des plante
+    Cclose.addEventListener('click',()=>{
+        containerAffichPlante.style.display = 'none'
+        sortieCaisse.style.display = 'none'
+        Cclose.style.cursor = "pointer"
+    })
 }
 afficheProduit(datas)
 
