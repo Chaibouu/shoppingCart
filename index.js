@@ -237,17 +237,19 @@ btnSearch.addEventListener('click',()=>{
         inputsearch.value = ""
     }
     else{
-        const fil = datas.filter((element) => element.libelle == inputsearch.value);
+        const fil = datas.filter((element) => element.libelle.toUpperCase() == inputsearch.value.toUpperCase());
         containercarte.innerHTML ="";
         afficheProduit(fil);
         console.log(inputsearch.value);
         console.log(fil);
         inputsearch.value =""
     }
+    console.log('gshfcsdvwfdwsvc')
 
 })
 
 
+// button pour gérer les étoile
 
 let btnEtoile = document.querySelectorAll('.btnEtoile')
 // btnEtoile.forEach(element => {
