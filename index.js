@@ -78,7 +78,7 @@ function infopanier() {
             panier.textContent = total() + ' F CFA';
             prixTotalPanier.textContent = 'Total  : ' + total() + ' F CFA';
             // fonctionnalité pour afficher le nombre de produit dans le panier
-            NombreItems.textContent = tab.length + " Items :";
+            NombreItems.textContent = tabbb.length + " Items :";
          })
          
      });
