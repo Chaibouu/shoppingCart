@@ -77,6 +77,8 @@ function infopanier() {
             total();
             panier.textContent = total() + ' F CFA';
             prixTotalPanier.textContent = 'Total  : ' + total() + ' F CFA';
+            // fonctionnalité pour afficher le nombre de produit dans le panier
+            NombreItems.textContent = tab.length + " Items :";
          })
          
      });
@@ -252,14 +254,14 @@ btnSearch.addEventListener('click',()=>{
 // button pour gérer les étoile
 
 let btnEtoile = document.querySelectorAll('.btnEtoile')
-// btnEtoile.forEach(element => {
-//     element.addEventListener('click', ()=>{
-//         element.classList.remove('fa-regular');
-//         element.classList.remove('fa-star');
-//         element.setAttribute('class','fa-solid fa-star')
-//         element.classList.add('colorEtoile')
-//     })
-// });
+btnEtoile.forEach(element => {
+    element.addEventListener('click', ()=>{
+        element.classList.remove('fa-regular');
+        element.classList.remove('fa-star');
+        element.setAttribute('class','fa-solid fa-star')
+        element.classList.add('colorEtoile')
+    })
+});
 
 let isStarred = true;
 for (let i = 0; i < btnEtoile.length; i++) {
