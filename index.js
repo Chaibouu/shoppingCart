@@ -302,3 +302,4 @@ function updateTab() {
 // commantaire 2
 /* add shoppingCart */
 /* add shoppingCart */
+/* add shoppingCart */
