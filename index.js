@@ -298,3 +298,5 @@ infopanier()
 function updateTab() {
     localStorage.setItem('cles',JSON.stringify(tab))
 }
+/* comentaire  1 */
+// commantaire 2
