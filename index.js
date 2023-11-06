@@ -116,12 +116,12 @@ const afficheProduit = (datas)=>{
         </div>
         <div class='container text-end fs-3 iconajoute'><i class="fa-solid fa-cart-arrow-down"></i></div>
         <div class="card-body  piedCarte">
-          <div class="text-end">
-            <i class="fa-regular fa-star btnEtoile"></i>
-            <i class="fa-regular fa-star btnEtoile"></i>
-            <i class="fa-regular fa-star btnEtoile"></i>
-            <i class="fa-regular fa-star btnEtoile"></i>
-            <i class="fa-regular fa-star btnEtoile"></i>
+          <div class="text-end contEtoile">
+            <span class="star"><i class="fa-regular fa-star btnEtoile" data-caze="1"></i></span>
+            <span class="star"><i class="fa-regular fa-star btnEtoile" data-caze="2"></i></span>
+            <span class="star"><i class="fa-regular fa-star btnEtoile" data-caze="3"></i></span>
+            <span class="star"><i class="fa-regular fa-star btnEtoile" data-caze="4"></i></span>
+            <span class="star"><i class="fa-regular fa-star btnEtoile" data-caze="5"></i></span>
           </div>
           <div class="d-flex justify-content-between">
             <h5 class="card-title">${element.libelle}</h5>
@@ -129,7 +129,82 @@ const afficheProduit = (datas)=>{
           </div>
         </div>
       </div>`
+      
     });
+    // button pour gérer les étoile
+    const starIcons = document.querySelectorAll('.contEtoile');
+
+    starIcons.forEach((card, cardIndex) => {
+        const star = [...card.children].filter(child => child.className === "star");
+        console.log(star);
+        star.forEach((item, starIndex) => {
+            item.addEventListener('click', () => {
+                star.forEach((stars, index2) => {
+                    starIndex >= index2 ? stars.classList.add('colorEtoile') : stars.classList.remove('colorEtoile');
+                });
+
+                // Enregistrez les etoiles dans le localStorage pour chaque image
+                const ratingData = Array.from(star).map(star => star.classList.contains('colorEtoile'));
+                localStorage.setItem(`userRating-${cardIndex}`, JSON.stringify(ratingData));
+            });
+
+            // Récupérez et initialisez l'etoile depuis le localStorage
+            const userRatingData = JSON.parse(localStorage.getItem(`userRating-${cardIndex}`));
+            if (userRatingData && userRatingData.length === star.length) {
+                if (userRatingData[starIndex]) {
+                    item.classList.add('colorEtoile');
+                } else {
+                    item.classList.remove('colorEtoile');
+                }
+            }
+        });
+    });
+    // let btnEtoile = document.querySelectorAll('.btnEtoile')
+    // btnEtoile.forEach(element => {
+    //     element.addEventListener('click', (e)=>{
+    //         // element.classList.remove('fa-regular');
+    //         // element.classList.remove('fa-star');
+    //         // element.setAttribute('class','fa-solid fa-star')
+    //         // element.classList.add('colorEtoile')
+    //         // console.dir(e.target, e.target.nodeName);
+    //         console.log(element.previousSibling);
+    //         while (element == element.previousSibling) {
+    //             console.log('oui');
+    //         }
+            
+    //     })
+    // });
+
+    // let isStarred = true;
+    // for (let i = 0; i < btnEtoile.length; i++) {
+    //     btnEtoile[i].addEventListener('click', () => {
+    //         if (!isStarred) {
+    //             // Si le bouton est déjà en état "starred", inversez les modifications
+    //             for (let j = 0; j <= i; j++) {
+                    
+    //                 btnEtoile[j].classList.remove('fa-regular');
+    //                 btnEtoile[j].classList.remove('fa-star');
+    //                 btnEtoile[j].setAttribute('class', 'fa-regular fa-star');
+    //                 btnEtoile[j].classList.remove('colorEtoilee');
+    //             }
+
+    //             isStarred = true; // Mettez à jour l'état du bouton
+    //             console.log(isStarred);
+    //         } 
+    //         else {
+    //             // Si le bouton n'est pas en état "starred", appliquez les modifications
+    //             for (let j = 0; j <= i; j++) {
+    //                 btnEtoile[j].classList.remove('fa-regular');
+    //                 btnEtoile[j].classList.remove('fa-star');
+    //                 btnEtoile[j].setAttribute('class', 'fa-solid fa-star');
+    //                 btnEtoile[j].classList.add('colorEtoile');
+    //             }
+    //             isStarred = false; // Mettez à jour l'état du bouton
+    //             console.log(isStarred);
+    //         }
+    //     })
+
+    // }
 
     // button ajouter au panier
     let iconajoute = document.querySelectorAll('.iconajoute');
@@ -255,49 +330,7 @@ btnSearch.addEventListener('click',()=>{
 })
 
 
-// button pour gérer les étoile
 
-let btnEtoile = document.querySelectorAll('.btnEtoile')
-btnEtoile.forEach(element => {
-    element.addEventListener('click', ()=>{
-        element.classList.remove('fa-regular');
-        element.classList.remove('fa-star');
-        element.setAttribute('class','fa-solid fa-star')
-        element.classList.add('colorEtoile')
-        
-        console.log(element)
-        console.log(element.parentElement)
-        
-    })
-});
-
-let isStarred = true;
-for (let i = 0; i < 5; i++) {
-    btnEtoile[i].addEventListener('click', () => {
-        if (!isStarred) {
-            // Si le bouton est déjà en état "starred", inversez les modifications
-            for (let j = 0; j <= i; j++) {
-                btnEtoile[j].classList.remove('fa-regular');
-                btnEtoile[j].classList.remove('fa-star');
-                btnEtoile[j].setAttribute('class', 'fa-regular fa-star');
-                btnEtoile[j].classList.remove('colorEtoilee');
-            }
-            
-            isStarred = false; // Mettez à jour l'état du bouton
-        } 
-        else {
-            // Si le bouton n'est pas en état "starred", appliquez les modifications
-            for (let j = 0; j <= i; j++) {
-                btnEtoile[j].classList.remove('fa-regular');
-                btnEtoile[j].classList.remove('fa-star');
-                btnEtoile[j].setAttribute('class', 'fa-solid fa-star');
-                btnEtoile[j].classList.add('colorEtoile');
-            }
-            isStarred = true; // Mettez à jour l'état du bouton
-        }
-    })
-    
-}
 
 
 // function pour ajouter des info au panier
