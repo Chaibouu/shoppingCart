@@ -117,11 +117,11 @@ const afficheProduit = (datas)=>{
         <div class='container text-end fs-3 iconajoute'><i class="fa-solid fa-cart-arrow-down"></i></div>
         <div class="card-body  piedCarte">
           <div class="text-end">
-            <i class="fa-regular fa-star btnEtoile"><span class="caze" style="display : none">0</span></i>
-            <i class="fa-regular fa-star btnEtoile"><span class="caze" style="display : none">1</span></i>
-            <i class="fa-regular fa-star btnEtoile"><span class="caze" style="display : none">2</span></i>
-            <i class="fa-regular fa-star btnEtoile"><span class="caze" style="display : none">3</span></i>
-            <i class="fa-regular fa-star btnEtoile"><span class="caze" style="display : none">4</span></i>
+            <i class="fa-regular fa-star btnEtoile"></i>
+            <i class="fa-regular fa-star btnEtoile"></i>
+            <i class="fa-regular fa-star btnEtoile"></i>
+            <i class="fa-regular fa-star btnEtoile"></i>
+            <i class="fa-regular fa-star btnEtoile"></i>
           </div>
           <div class="d-flex justify-content-between">
             <h5 class="card-title">${element.libelle}</h5>
@@ -264,17 +264,13 @@ btnEtoile.forEach(element => {
         element.classList.remove('fa-star');
         element.setAttribute('class','fa-solid fa-star')
         element.classList.add('colorEtoile')
-
-        element.innerHTML = `<span class="caze">1</span>`;
-        let caze = document.querySelectorAll('.caze')
-        caze.forEach(element => {element.style.display = 'none'})
         
         console.log(element)
         console.log(element.parentElement)
         
     })
 });
-log
+
 let isStarred = true;
 for (let i = 0; i < 5; i++) {
     btnEtoile[i].addEventListener('click', () => {
