@@ -265,33 +265,33 @@ btnEtoile.forEach(element => {
     })
 });
 
-let isStarred = true;
-for (let i = 0; i < btnEtoile.length; i++) {
-    btnEtoile[i].addEventListener('click', () => {
-        if (!isStarred) {
-            // Si le bouton est déjà en état "starred", inversez les modifications
-            for (let j = 0; j <= i; j++) {
-                btnEtoile[j].classList.remove('fa-regular');
-                btnEtoile[j].classList.remove('fa-star');
-                btnEtoile[j].setAttribute('class', 'fa-regular fa-star');
-                btnEtoile[j].classList.remove('colorEtoilee');
-            }
+// let isStarred = true;
+// for (let i = 0; i < btnEtoile.length; i++) {
+//     btnEtoile[i].addEventListener('click', () => {
+//         if (!isStarred) {
+//             // Si le bouton est déjà en état "starred", inversez les modifications
+//             for (let j = 0; j <= i; j++) {
+//                 btnEtoile[j].classList.remove('fa-regular');
+//                 btnEtoile[j].classList.remove('fa-star');
+//                 btnEtoile[j].setAttribute('class', 'fa-regular fa-star');
+//                 btnEtoile[j].classList.remove('colorEtoilee');
+//             }
             
-            isStarred = false; // Mettez à jour l'état du bouton
-        } 
-        else {
-            // Si le bouton n'est pas en état "starred", appliquez les modifications
-            for (let j = 0; j <= i; j++) {
-                btnEtoile[j].classList.remove('fa-regular');
-                btnEtoile[j].classList.remove('fa-star');
-                btnEtoile[j].setAttribute('class', 'fa-solid fa-star');
-                btnEtoile[j].classList.add('colorEtoile');
-            }
-            isStarred = true; // Mettez à jour l'état du bouton
-        }
-    })
+//             isStarred = false; // Mettez à jour l'état du bouton
+//         } 
+//         else {
+//             // Si le bouton n'est pas en état "starred", appliquez les modifications
+//             for (let j = 0; j <= i; j++) {
+//                 btnEtoile[j].classList.remove('fa-regular');
+//                 btnEtoile[j].classList.remove('fa-star');
+//                 btnEtoile[j].setAttribute('class', 'fa-solid fa-star');
+//                 btnEtoile[j].classList.add('colorEtoile');
+//             }
+//             isStarred = true; // Mettez à jour l'état du bouton
+//         }
+//     })
     
-}
+// }
 
 
 // function pour ajouter des info au panier
