@@ -262,6 +262,7 @@ btnEtoile.forEach(element => {
         element.classList.remove('fa-star');
         element.setAttribute('class','fa-solid fa-star')
         element.classList.add('colorEtoile')
+        console.log(element.elementParent)
     })
 });
 
