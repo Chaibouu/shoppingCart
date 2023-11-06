@@ -19,6 +19,8 @@ let sortieCaisse = document.querySelector('.sortieCaisse');
 let Cclose = document.querySelector('.Cclose');
 let NombreItems = document.querySelector('.NombreItems');
 
+
+
 // initialisation du tableau
 if(!localStorage.getItem('cles')){
     localStorage.setItem('cles',JSON.stringify([]))
@@ -108,18 +110,18 @@ affTotal()
 //la fonction affichage des données des produits depuis de datas
 const afficheProduit = (datas)=>{
     datas.forEach(element => {
-        containercarte.innerHTML +=`<div class="card col-9 col-md-5 col-lg-3 d-flex justify-content-center align-item-center p-0 m-4">
+        containercarte.innerHTML +=`<div class="card cartee col-9 col-md-5 col-lg-3 d-flex justify-content-center align-item-center p-0 m-4">
         <div class="carteimg w-100 "> 
             <img src=${element.url} class="card-img-top" alt="...">
         </div>
         <div class='container text-end fs-3 iconajoute'><i class="fa-solid fa-cart-arrow-down"></i></div>
         <div class="card-body  piedCarte">
           <div class="text-end">
-            <i class="fa-regular fa-star btnEtoile"></i>
-            <i class="fa-regular fa-star btnEtoile"></i>
-            <i class="fa-regular fa-star btnEtoile"></i>
-            <i class="fa-regular fa-star btnEtoile"></i>
-            <i class="fa-regular fa-star btnEtoile"></i>
+            <i class="fa-regular fa-star btnEtoile"><span class="caze" style="display : none">0</span></i>
+            <i class="fa-regular fa-star btnEtoile"><span class="caze" style="display : none">1</span></i>
+            <i class="fa-regular fa-star btnEtoile"><span class="caze" style="display : none">2</span></i>
+            <i class="fa-regular fa-star btnEtoile"><span class="caze" style="display : none">3</span></i>
+            <i class="fa-regular fa-star btnEtoile"><span class="caze" style="display : none">4</span></i>
           </div>
           <div class="d-flex justify-content-between">
             <h5 class="card-title">${element.libelle}</h5>
@@ -262,37 +264,44 @@ btnEtoile.forEach(element => {
         element.classList.remove('fa-star');
         element.setAttribute('class','fa-solid fa-star')
         element.classList.add('colorEtoile')
-        console.log(element.elementParent)
+
+        element.innerHTML = `<span class="caze">1</span>`;
+        let caze = document.querySelectorAll('.caze')
+        caze.forEach(element => {element.style.display = 'none'})
+        
+        console.log(element)
+        console.log(element.parentElement)
+        
     })
 });
-
-// let isStarred = true;
-// for (let i = 0; i < btnEtoile.length; i++) {
-//     btnEtoile[i].addEventListener('click', () => {
-//         if (!isStarred) {
-//             // Si le bouton est déjà en état "starred", inversez les modifications
-//             for (let j = 0; j <= i; j++) {
-//                 btnEtoile[j].classList.remove('fa-regular');
-//                 btnEtoile[j].classList.remove('fa-star');
-//                 btnEtoile[j].setAttribute('class', 'fa-regular fa-star');
-//                 btnEtoile[j].classList.remove('colorEtoilee');
-//             }
+log
+let isStarred = true;
+for (let i = 0; i < 5; i++) {
+    btnEtoile[i].addEventListener('click', () => {
+        if (!isStarred) {
+            // Si le bouton est déjà en état "starred", inversez les modifications
+            for (let j = 0; j <= i; j++) {
+                btnEtoile[j].classList.remove('fa-regular');
+                btnEtoile[j].classList.remove('fa-star');
+                btnEtoile[j].setAttribute('class', 'fa-regular fa-star');
+                btnEtoile[j].classList.remove('colorEtoilee');
+            }
             
-//             isStarred = false; // Mettez à jour l'état du bouton
-//         } 
-//         else {
-//             // Si le bouton n'est pas en état "starred", appliquez les modifications
-//             for (let j = 0; j <= i; j++) {
-//                 btnEtoile[j].classList.remove('fa-regular');
-//                 btnEtoile[j].classList.remove('fa-star');
-//                 btnEtoile[j].setAttribute('class', 'fa-solid fa-star');
-//                 btnEtoile[j].classList.add('colorEtoile');
-//             }
-//             isStarred = true; // Mettez à jour l'état du bouton
-//         }
-//     })
+            isStarred = false; // Mettez à jour l'état du bouton
+        } 
+        else {
+            // Si le bouton n'est pas en état "starred", appliquez les modifications
+            for (let j = 0; j <= i; j++) {
+                btnEtoile[j].classList.remove('fa-regular');
+                btnEtoile[j].classList.remove('fa-star');
+                btnEtoile[j].setAttribute('class', 'fa-solid fa-star');
+                btnEtoile[j].classList.add('colorEtoile');
+            }
+            isStarred = true; // Mettez à jour l'état du bouton
+        }
+    })
     
-// }
+}
 
 
 // function pour ajouter des info au panier
