@@ -58,13 +58,15 @@ function infopanier() {
             let tt = element.textContent;
             let asup = e.target.parentElement.parentElement;
             asup.remove();
-            tabFilter=[];
-            tabbb.forEach((element) =>{
-                if (element.index != tt){
-                    tabFilter.push(element);
-                    tabbb = tabFilter;
-                }
-            })
+            let res = tabbb.filter((el)=> el.index != tt)
+            tabbb = res;
+            // tabFilter=[];
+            // tabbb.forEach((element) =>{
+            //     if (element.index != tt){
+            //         tabFilter.push(element);
+            //         tabbb = tabFilter;
+            //     }
+            // })
             localStorage.setItem('cles',JSON.stringify(tabbb));
             infopanier();
             const total = ()=>{
